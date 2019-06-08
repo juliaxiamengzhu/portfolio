@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Portfolio: Modern Walkman</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<main class = "container">
+		<nav>
+			<header><h1><a href = "index.html">Julia X. Zhu</a></h1></header>
+			<ul>
+				<li class = "current">Work</li>
+				<li><a href ="about.html">About</a></li>
+				<li><a href="https://juliaxiamengzhu.wordpress.com/">Graphic Design</a></li>
+			</ul>
+		</nav>
+
+		<content>
+			<section>
+				<h2>Modern Walkman: A Case Study</h2>
+				<img src="img/showpieces/frame2.png" alt="Music App splash image">
+			</section>
+
+			<section>
+				<h3>Conception and User Modelling</h3>
+				<p>As part of a deceptively simple assignment, I had to design a music app. </p>
+				<p>To determine how this app would differentiate itself, I analyzed the features and designs found on competitors' music apps</p>
+
+				<h4>Summary of competitors' designs:</h4>
+					<ul>
+						<li> The play/pause button is the biggest icon on the media playback control, and it is also centrally positioned.</li>
+						<li> Media playback controls will show how much time elapsed while the song is playing.</li>
+						<li> Music apps allow you to create your own playlist, which have large thumbnails.</li>
+						<li> Playlists have visual cues. For example, a 70's playlist would have a picture of several hippies on it.</li>
+						<li> Media playback control icons are mostly identical, indicating their universality. Deviating from recognizable icons may confuse users.</li>
+					</ul>
+
+				<p>Competitive analysis allowed me to observe competitors' approaches to designing music apps. The next step was to brainstorm the pain points of various users. Instead of creating user personas, I created several user models to avoid becoming too attached to a user persona. Most were based off of people I knew in real-life.</p>
+
+				<figure><img src = "img/music player model.png"></figure>
+				<figcaption>The voice control aspect was eventually discarded to focus on other features.</figcaption>
+
+				<h4>Based on what I gleaned from the user models, I jotted down the features this app would have, as well as sketching them out:</h4>
+					<ul>
+		    			<li> Radio stations.</li>
+		    			<li> The ability to "like" songs played on the radio. Liked songs will appear in your app for later use.</li>
+		    			<li> Accessible to older audiences.</li>
+		    			<li> Play songs already stored in your phone.</li>
+		    			<li> Create and customize playlists, dubbed "mixtapes" in this app.</li>
+		    			<li>"Liked" songs are temporarily stored in the app's storage, and can disappear any time the app no long has rights to them.</li>
+		    			<li> Subscribed members can download songs from the radio onto their phone instead of "liking" them.</li>
+	    			</ul>
+	    		<figure><img src = "img/concept sketches.png"></figure>
+				<figcaption>Some rough sketches of the the potential app</figcaption>
+				<figure><img src = "img/concept3.png"></figure>	
+				<figcaption>Concept sketches of the design of the app.</figcaption>	
+
+	    		<p>From those sketches, I created the lo-fi mockup of the app on Figma.</p>
+				
+				<figure><a href = "https://www.figma.com/proto/XYxJ0NoKdrD4y90yYwWqFMxS/Untitled?node-id=0%3A1&viewport=1368%2C17%2C0.166426&scaling=scale-down" target = "_blank"><img src = "img/lofi.png"></a></figure>
+				<figcaption>Click on the image to view the lo-fi prototype on Figma</figcaption>
+			</section>
+
+			<section>
+				<h3> The User Testing</h3>
+				<p>After completion of the prototype, my father volunteered to test it out. My father regularly asks me to be his IT support, and uses technology to browse Chinese websites. I asked him to perform three tasks: 
+					<ul>
+		    			<li> Find the radio and select a station.
+		    				<ul>
+		    					<li>Results: He initially asked where the menu was, before finding it without my help. If I hadn't labelled the hamburger icon as "menu," he would've been stuck on this task. He was also confused by the title overlays that appear when he tapped on a given radio station. </li>
+		    				</ul>
+		    			</li>
+		    				<li> Go to "My Phone," and order the songs by "song" instead of artist.
+		    				<ul>
+		    					<li>Results: He immediately figured out how to perform this task. </li>
+		    				</ul>
+		    			</li>
+
+		    			<li> Go to your "Mixtape" and create a new mixtape with the font title as "Ribeye," the font color as red, and with the decal color as black.
+		    				<ul>
+		    					<li>Results: After asking me what "mixtape" and "decal" meant, I realized that cultural differences prevented him from understanding how to perform the task, even when I tried to explain those terms in broken Chinese--to put this in context, my dad move to the US after China came out of isolation, so he was not fluent in American pop culture. Additionally, he had trouble figuring out where to create a new mixtape, and could barely see the touch area for the font colors.</li>
+		    				</ul>
+		    			</li>
+	    			</ul>
+	    		Several days after the the user testing, my dad advised me to create success/error messages in the app after completion of certain tasks.
+    		</section>
+
+    		<section>
+	    		<h3> The Hi-fi Prototype</h3>
+	    		<p>I proceeded to make the hi-fi prototype, with the user testing results in mind. Along the way there were a couple major changes made:
+	    			<ul>
+	    				<li> Instead of showing separate screens whenever the songs are sorted by "artist" or "song," I opted to merge those screens by adding a horizontal scroll menu for the artists. After my mom commented that she had no idea how the horizontal scroll menu worked, I added a short line to clarify how to use it.<br>
+	    				<figure><img src = "img/horizontal_bar.png"></a></figure>
+						<figcaption>Sometimes I have to spell things out</figcaption></li>
+	    				<li> Because my father had trouble customizing a mixtape, I simplified the process by having the mixtape customization done on one screen.  Originally, there was a series of screens for the customization.</li>
+	    			</ul>
+
+
+	    		<p>You can view the prototype in the image below:</p>
+	    		<figure><a href = "https://www.figma.com/proto/VqTiDqgS1s2tSC82obAmYP/Untitled-Copy?node-id=25%3A163&viewport=1761%2C345%2C0.119955&scaling=scale-down" target = "_blank"> <img src = "img/showpieces/musicplayer.gif"></a></figure>
+	    		<figcaption>Click on the image to view the hi-fi prototype on Figma</figcaption></p>
+
+	    		<h3>Conclusion</h3>
+	    		<p>While I am proud of how the music player design turned out so far, it is still a work in progress.</p>
+	    		<p> Through this project I got a glimpse of the UX research process, and thank goodness I did.  Had I not tested the design with my father, many design choices I thought were accessible turned out to be unintuitive for someone like him. The importance of feedback cannot be overstated.</p>
+	    	</section>
+	    	<div class = "back"><a href = "index.html">&#x21BC; Back</a></div>
+		</content>
+	</main>
+</body>
+
+</html>
