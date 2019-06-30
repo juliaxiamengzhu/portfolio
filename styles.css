@@ -281,7 +281,7 @@ img{
 }
 
 .left-link{
-	left: -100%;
+	left: -90%;
 	grid-column: 1/span 2;
 	transition: left 0.5s ease-in-out;
 	-o-transition: left 0.5s ease-in-out;
@@ -290,12 +290,21 @@ img{
 	-webkit-transition: left 0.5s ease-in-out;
 }
 
-.splash:hover .left-link{
+.left-link .left-pull{
+	position: absolute;
+  	top: 50%;
+  	right: 0;
+  	width: 10%;
+  	height: 50%;
+  	cursor: pointer;
+}
+
+.left-link:hover{
 	left: 0px;
 }
 
 .right-link{
-	right: -100%;
+	right: -90%;
 	grid-column: 4/span 2;
 	transition: right 0.5s ease-in-out;
 	-o-transition: right 0.5s ease-in-out;
@@ -304,6 +313,20 @@ img{
 	-webkit-transition: right 0.5s ease-in-out;
 }
 
-.splash:hover .right-link{
+.right-link .right-pull{
+	position: absolute;
+  	top: 50%;
+  	left: 0;
+  	width: 10%;
+  	height: 50%;
+  	cursor: pointer;
+}
+
+/*.splash:hover .right-link{
+	right: 0px;
+}*/
+.splash .right-link:hover{
 	right: 0px;
 }
+
+@media {}
