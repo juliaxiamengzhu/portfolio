@@ -96,7 +96,7 @@ a:hover{
  	display: grid;
   	grid-template-columns:
 	    [full-start]2.5rem [nav-start] minmax(1em, 1fr) 
-	    [main-start] minmax(0, 3fr) [main-end]
+	    [main-start] minmax(0, 8fr) [main-end]
 	    minmax(1em, 1fr) [nav-end] 2.5rem[full-end];
 	grid-row-gap: 40px;
 }
@@ -121,6 +121,27 @@ nav ul{
 	text-align: right;
 	grid-column: 2/span 4;
 	margin: auto 0;
+}
+
+#hamburger-icon, .toggler{
+/*	grid-column: 5/span 1;*/
+	position: absolute;
+	top: 45%;
+	right: 0;
+	text-align: right;
+	margin-left: 1.5em;
+/*	display: none;*/
+	font: 2em 'Varela Round', sans-serif;
+}
+
+#hamburger-icon{
+	z-index: 2;
+}
+
+.toggler{
+	z-index: 1;
+	height: 2em;
+	width: 1em;
 }
 
 nav li {
@@ -163,7 +184,6 @@ figcaption{
 .splash{
 	position: relative;
 	grid-column: full;
-	float: left;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr [sub-column]);
 	font-family: 'Varela Round', sans-serif;
@@ -326,3 +346,64 @@ img{
 .splash .right-link:hover{
 	right: 0px;
 }
+
+@media screen and (max-width: 1059px) {
+	body, html{
+		font-size: 14px;
+	}
+
+	.left-link,.right-link{
+	padding: 80px;
+	}
+
+	.left-link{
+		padding-left: 40px;
+	}
+
+	.right-link{
+		padding-right: 40px;
+	}
+}
+
+@media screen and (max-width: 934px){
+	nav{
+		grid-template-columns: 2fr repeat(4, minmax(1em, 1fr));
+	}
+
+	nav li{
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 899px){
+	header{
+		grid-column: 1/span 3;
+	}
+	#hamburger-icon{
+		display: inline-block;
+	}
+	
+	nav ul, nav:active ul {
+		z-index: 99;
+		background-color: white; 
+		display: none;
+		position: absolute;
+		padding: 20px;
+		right: 0px;
+		top: 80px;
+	}
+
+	nav li {
+		background-color: white;
+		text-align: center;
+		width: 100%;
+		padding: 20px 0;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+}
+
+
