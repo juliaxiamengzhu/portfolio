@@ -12,6 +12,7 @@ html, body{
 	line-height: normal;
 	height: 100%;
 	color: #4F4F4F;
+	overflow-x: hidden;
 }
 
 header, nav, main, footer, aside, ul, ol, li, h1, h2, h3, h4, p, figure, br, figcaption{ /*override browser defaults*/
@@ -23,7 +24,6 @@ ul{
 	margin-left: 1em;
 	display: block;
 	list-style: circle;
-/*	font-style: italic;*/
 	margin-bottom: 1.5em;
 }
 
@@ -116,21 +116,22 @@ header{
 	padding-bottom: 20px;
 }
 
-nav ul{
-	display: initial;
+#menu{
+	display: inline-block;
 	font: 1.25em 'Varela Round', sans-serif;
 	text-align: right;
 	grid-column: 2/span 4;
 	margin: auto 0;
 }
 
-#hamburger-icon{
+
+#hamburger-icon, nav label{
+	display: none;
 	position: absolute;
 	top: 38%;
 	right: 0;
 	text-align: right;
 	margin-left: 1.5em;
-	display: none;
 	font: 2em 'Varela Round', sans-serif;
 }
 
@@ -305,7 +306,6 @@ img{
 
 .splash .left-pull, .splash .right-pull{
 	position: absolute;
-/*  	top: 43%;*/
   	width: 10%;
   	cursor: pointer;
   	text-align: center;
@@ -317,7 +317,7 @@ img{
   	right: 0.1em;
 }
 
-.left-link:hover{
+.splash .left-link:hover{
 	left: 0px;
 }
 
@@ -372,11 +372,13 @@ img{
 	header{
 		grid-column: 1/span 3;
 	}
+
+
 	#hamburger-icon{
 		display: inline-block;
 	}
 	
-	nav ul{
+	#menu, #menu-responsive{
 		z-index: 99;
 		background-color: white; 
 		display: none;
@@ -384,6 +386,10 @@ img{
 		padding: 20px;
 		right: 0px;
 		top: 80px;
+	}
+
+	#menu-responsive{
+		display: block;
 	}
 
 	nav li {
@@ -455,6 +461,4 @@ img{
 		padding-left: 20px;
 		grid-column: 1/span 4;
 	}
-}
-
 }
