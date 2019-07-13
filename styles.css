@@ -63,9 +63,7 @@ p{
 	line-height: 1.5em;
 }
 
-content{
-	padding: 0 10%;
-}
+
 
 br{
 	line-height: 0.5em;
@@ -107,7 +105,6 @@ nav{
 	display: grid;
 	grid-template-columns: 1.5fr repeat(4, minmax(1em, 1fr));
 	align-self: center;
-/*	margin-bottom: 40px;*/
 }
 
 header{
@@ -140,7 +137,7 @@ header{
 	background-color: rgba(0,0,0,0.5);
 	z-index: 1;
 	position: fixed;
-	top: 110px;
+	top: 15vh;
 	left: 0;
 	width: 100%;
 	height: 100%;
@@ -216,7 +213,9 @@ figcaption{
 	overflow: hidden;
 }
 
+
 content{
+	padding: 0 10%;
 	padding-top: 20px;
 	grid-column: main;
 }
@@ -340,6 +339,7 @@ img{
 	right: 0px;
 }
 
+/*Breakpoints*/
 @media screen and (max-width: 1059px) {
 	body, html{
 		font-size: 14px;
@@ -373,6 +373,13 @@ img{
 		grid-column: 1/span 3;
 	}
 
+	.right-link{
+		grid-column: 3/span 3;
+	}
+
+	.left-link{
+		grid-column: 1/span 3;
+	}
 
 	#hamburger-icon{
 		display: inline-block;
@@ -385,7 +392,7 @@ img{
 		position: absolute;
 		padding: 20px;
 		right: 0px;
-		top: 80px;
+		top: 10vh;
 	}
 
 	#menu-responsive{
@@ -402,27 +409,29 @@ img{
 }
 
 
-@media screen and (max-width: 690px){
-	body, html{
-		font-size: 12px;
-	}
-
+@media screen and (max-width: 790px){
 	.splash h2{
 		font-size: 2em;
 	}
 
 	.right-link{
 		padding-right: 20px;
-		grid-column: 3/span 3;
 	}
 
 	.left-link{
 		padding-left: 20px;
-		grid-column: 1/span 3;
+	}
+
+	.thumb{
+		flex-basis: 100%;
 	}
 }
 
-@media screen and (max-width: 390px){
+
+@media screen and (max-width: 470px){
+	content{
+		padding: 0;
+	}
 	h1{
 		font-size: 2.5em;
 	}
@@ -460,5 +469,12 @@ img{
 	.left-link{
 		padding-left: 20px;
 		grid-column: 1/span 4;
+	}
+}
+
+
+@media screen and (max-width: 390px){
+	body, html{
+		font-size: 12px;
 	}
 }
