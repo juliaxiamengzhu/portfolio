@@ -103,14 +103,14 @@ a:hover{
 	grid-column-start: 1;
 	height: 100%;
 	background-color: white;
-	z-index: 99;
+	z-index: 5002;
 }
 
 .nav-right{
 	grid-column-start: 5;
 	height: 100%;
 	background-color: white;
-	z-index: 100;
+	z-index: 5001;
 }
 
 nav{
@@ -120,7 +120,7 @@ nav{
 	grid-template-columns: 1.5fr repeat(4, minmax(1em, 1fr));
 	align-self: center;
 	background-color: white;
-	z-index: 98;
+	z-index: 5000;
 }
 
 header{
@@ -403,7 +403,7 @@ img{
 	}
 	
 	#menu, #menu-responsive{
-		z-index: 5000;
+		z-index: 99;
 		background-color: white; 
 		display: none;
 		position: absolute;
