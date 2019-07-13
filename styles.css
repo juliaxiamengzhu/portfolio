@@ -99,12 +99,28 @@ a:hover{
 	grid-row-gap: 2.5em;
 }
 
+.nav-left{
+	grid-column-start: 1;
+	height: 100%;
+	background-color: white;
+	z-index: 99;
+}
+
+.nav-right{
+	grid-column-start: 5;
+	height: 100%;
+	background-color: white;
+	z-index: 100;
+}
+
 nav{
 	position: relative;
 	grid-column: nav;
 	display: grid;
 	grid-template-columns: 1.5fr repeat(4, minmax(1em, 1fr));
 	align-self: center;
+	background-color: white;
+	z-index: 98;
 }
 
 header{
@@ -135,14 +151,14 @@ header{
 #overlay{
 	display: none;
 	background-color: rgba(0,0,0,0.5);
-	z-index: 1;
+	z-index: 50;
 	position: fixed;
-	top: 15vh;
+	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-
+	height: 100%;;
 }
+
 nav li {
 	padding: 40px 0 20px 0;
 	text-align: center;
@@ -281,6 +297,7 @@ img{
 	position: absolute;
 	background-color: white;
 	justify-content: center;
+	word-wrap: break-word;
 }
 
 .center-link{
@@ -370,7 +387,7 @@ img{
 
 @media screen and (max-width: 899px){
 	header{
-		grid-column: 1/span 3;
+		grid-column: 1/span 4;
 	}
 
 	.right-link{
@@ -386,13 +403,14 @@ img{
 	}
 	
 	#menu, #menu-responsive{
-		z-index: 99;
+		z-index: 5000;
 		background-color: white; 
 		display: none;
 		position: absolute;
 		padding: 20px;
 		right: 0px;
 		top: 10vh;
+		width: 30vh;
 	}
 
 	#menu-responsive{
@@ -410,6 +428,11 @@ img{
 
 
 @media screen and (max-width: 790px){
+	content{
+		grid-column: nav;
+		padding: 0;
+	}
+
 	.splash h2{
 		font-size: 2em;
 	}
@@ -429,15 +452,12 @@ img{
 
 
 @media screen and (max-width: 470px){
-	content{
-		padding: 0;
-	}
 	h1{
 		font-size: 2.5em;
 	}
 
 	h2{
-		font-size: 2em;
+		font-size: 1.5em;
 		margin-bottom: 0.5em;
 		width: 100%;
 	}
@@ -452,14 +472,14 @@ img{
 		grid-row-gap: 1em;
 	}
 
-	.splash:nth-child(3){
+	.splash:nth-child(5){
 		display: none;
 	}
 
 	.splash img{
-		height: 40vh;
+		height: 30vh;
 		object-fit: cover;
-		}
+	}
 
 	.right-link{
 		padding-right: 40px;
