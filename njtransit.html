@@ -1,0 +1,130 @@
+!DOCTYPE html> 
+<html>
+<head>
+	<title>Portfolio of Julia Zhu</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<main class = "container">
+		<div class = "nav-left"></div>
+		<nav>
+			<header><h1><a href = "index.html">Julia X. Zhu</a></h1></header>
+			<span id = "hamburger-icon">&#9776;</span>
+			<ul id = "menu">
+				<li class = "current">Work</li>
+				<li><a href ="about.html">About</a></li>
+				<li><a href="https://juliaxiamengzhu.wordpress.com/">Graphic Design</a></li>
+			</ul>
+
+		</nav>
+		<div class = "nav-right"></div>
+		<div id = "overlay"></div>
+
+		<content>
+			<section>
+				<h2>NJ Transit: Streamlining Ticket Purchases</h2>
+				<img src="img/showpieces/frame5.jpg" alt="NJ Transit Splash image">
+			</section>
+
+			<section>
+				<h3>Background</h3>
+
+				<p>I downloaded NJ Transit’s MyTix to purchase electronic tickets. It seemed like a good alternative to carrying change every time I got onto the bus.</p>
+
+				<p>While the app was convenient, there were questionable design issues, such as uneven icon resolutions, ads placed right below the "Back" button, and unaligned form fields. The buttons on the main page itself were different sizes, perhaps to emphasize importance, but in practice created an unbalanced layout. The app itself did not feel intuitive. For example, I’d have to go through several screens to pick a bus stop, or I’d stare at the payment screen wondering how to proceed. </p>
+
+				<figure><img src = "img/njtransit_originalscreens.png"></figure>
+				<figcaption>From left to right: Uneven button sizes, unaligned form fields, and ads on the buttom of the "Back" button</figcaption>
+
+				<p>It turned out that many users had the same issues. Their main points of contention were that the UI was clunky, barely functional, and not pretty, sentiments that reflected my own experience with the app.</p>
+
+				<figure><img src = "img/njtransit_card.png" alt="NJ Transit"><img src = "img/njtransit_ratings.png" alt = "NJ Transit ratings"><figcaption>The users had some complaints</figcaption></figure>
+			
+				<p></p>
+				<p>There’s only one thing to do: <strong>Improve the app!</strong></p>
+			</section>
+
+			<section>
+				<h3>In-Depth User Research</h3>
+				<p>To identify detailed pain points, I let my mom try the app out. Her task was simple: buy a ticket. The task turned more complicated than both of us anticipated.</p>
+
+ 				<p>To summarize her complaints:</p>
+ 				<ul>
+					<li>Rather than selecting the “Buy” option, she selected the “Trip Planner” link to buy her ticket. She was not pleased with scrolling down a list of stations to select the origin/ destination points. Furthermore, although she wanted to select the arrive by time, she could only specify the departure time.</li> 
+					<li>Since the  Trip Planner option left a bad taste in her mouth, she went back and selected the "Buy" option instead. While trying to buy a bus ticket, she was confused by the transition between picking the origin station and picking the destination station. It turned out that the only difference between the origin station screen and the destination station screen was the heading on the top, as everything else looked similar.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>The Wireframe:</h3>
+				<p>Combining my personal experience with the app, my mom’s experience with the app, and the complaints mentioned in user reviews, I used the information I gathered to create the wireframe.</p>
+
+				<p>I generally followed the flow of the original app for the wireframe, with 2 major exceptions. One, I added a map of New Jersey when purchasing bus/train tickets to provide a visual representation of the route.</p>
+				<figure><img src ="img/njtransit_wireframewhole.png"><img src = "img/njtransit_wireframes.png"> </figure>
+				<figcaption>Top: All the wireframe screens. Bottom: Wireframes for the homepage, the map, and the payment screen.</figcaption>
+
+				<p>Additionally, I resized the buttons on the home page to be of equal size. I placed the “Buy” button on the top row to hint at its importance. The less important buttons were placed on the bottom rows</p>
+
+				<p>I tested the wireframe with my mother and her comments were as follows:</p>
+					<ul>
+						<li>She was confused by the zoom-in and zoom-out buttons on the map, and suggested that I add magnifying glasses to those buttons</li>
+	   					<li>After struggling with the checkout design, she asked me to look at Amazon’s UI . She did not understand the point of having “Favorite Pay” in the checkout page, even though it was in the original app.</li>
+	 					<li>She did not see the need for a separate screen to appear when selecting the origin and destination stations. She'd rather see all the station choices on the same screen.</li>
+	 				</ul>
+	 			</section>
+
+	 			<section>
+				<h3>First Draft, with the colors</h3>
+
+				<p>Colors of this redesign were based on the NJ Transit logo, although I opted for lighter, more saturated colors to make navigation more vibrant. Additionally, <a href = "https://uxplanet.org/bright-colors-in-ui-design-benefits-and-drawbacks-433680f0a1c7">brighter colors also help increase readability</a>. Thus, I drafted this design using the wireframe and my mother's suggestions as guidelines.</p>
+
+				<figure><img src = "img/njtransit_draft1.png"></figure>
+				<figcaption>Brighter colors help increase readability</figcaption> 
+
+
+				<p>Once again, my mother tested out the draft, and her comments were as follows</p>
+					<ul>
+						<li>She asked me how to buy bus tickets by zone numbers. Admittedly, buying tickets by number of zones had confused me as well. We agreed to remove this option.</li>
+						<li>I needed a review page before confirming purchase of tickets. By the same logic, I needed a warning pop-up before activating tickets.</li>
+						<li>After selecting the origin and destination points, those points would appear on the map. In this draft, I had used a “o” icon for the origin and the GPS icon for the destination. It turned out my mom didn’t understand what those icons meant, and suggested using different icons instead.</li>
+						<li>The “Alerts” on the home page took up too much space.</li>
+					</ul>
+				</section>
+
+				<section>
+				<h3>Final Draft</h3>
+
+				<p>Once again, I followed my mother’s suggestions in this round. Additionally, I opted to place the “Buy Ticket” “View Tickets” and “Trip Planner” as the main buttons on the home page, with the rest of the buttons arranged below them:</p>
+				<p>Besides rearranging the buttons, I had collapsed the original “Alerts” design into a single “Welcome” line—to view new alerts, the user simply need to tap on the arrow next to the line.</p>
+
+				<figure><img src = "img/njtransit_seconddraft.png" ></figure>
+				<figcaption> Redesigned the home page and used different origin/destination markers for the maps</figcaption>
+
+
+				<h3>Final review with my mom</h3>
+				<p>Upon testing it, my mom said, “you’ve made a great deal of improvement on the design.” In fact, she was quiet during the testing, a good indicator that she had no issue navigating through the prototype.</p>
+				<figure>
+					<a href = "https://www.figma.com/proto/OF9QabyH6x1p4ST16jlw0s/Untitled?node-id=162%3A2779&viewport=1035%2C-99%2C0.2828766703605652&scaling=scale-down">
+						<img src = "img/njtransit_gif2.gif">
+					</a>
+					</figure>
+					<figcaption>Click on the gif to view the protype</figcaption>
+				</section>
+
+				<section>
+				<h3>Conclusion</h3>
+				<figure><img src = "img/njtransit_comparisons.jpg"></figure>
+				<figcaption>Original (left) vs final version (right)</figcaption>
+				<p>While the original app was serviceable, the design aspects left a lot to be desired. I sought to improve the design to make the app more pleasant to use. After several rounds of feedback and incremental improvements, I designed a prototype that addressed the concerns outlined in the negative user reviews on the app’s download page.</p>
+				</section>
+
+    		<div class = "back"><a href = "index.html">&#x21BC; Back</a></div>
+		</content>		
+	</main>
+		<script src = "hamburger_menu.js"></script>
+</body>
+
+</html>
